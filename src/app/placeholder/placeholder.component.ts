@@ -9,7 +9,7 @@ export class PlaceholderComponent {
   readonly links = [
     {
       title: 'Learn from deck',
-      link: 'https://github.com/shhdharmen/tilconf-m3-angular/tree/main',
+      link: 'https://github.com/shhdharmen/tilconf-m3-angular/blob/main/TiL%20Conf%20-%20Using%20Material%203%20with%20Angular.pdf',
     },
     { title: 'Angular Material Dev', link: 'https://angular-material.dev' },
     { title: 'Read Blogs', link: 'https://blog.shhdharmen.me/' },
