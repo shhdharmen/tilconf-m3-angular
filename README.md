@@ -1,6 +1,6 @@
-# M3Angular
+# Using Material 3 (M3) with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+This branch `at-installed-deps` is for audience to get started with exercise. Final code and full deck is available at [`main`](https://github.com/shhdharmen/tilconf-m3-angular/tree/main) branch.
 
 ## Development server
 
