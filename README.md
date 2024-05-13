@@ -6,6 +6,8 @@ This branch `at-installed-deps` is for audience to get started with exercise. Fi
 
 ```bash
 git clone https://github.com/shhdharmen/tilconf-m3-angular.git --branch at-installed-deps
+cd tilconf-m3-angular
+npm i
 ```
 
 ## Development server
