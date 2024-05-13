@@ -2,6 +2,12 @@
 
 This branch `at-installed-deps` is for audience to get started with exercise. Final code and full deck is available at [`main`](https://github.com/shhdharmen/tilconf-m3-angular/tree/main) branch.
 
+## Clone the starter
+
+```bash
+git clone https://github.com/shhdharmen/tilconf-m3-angular.git --branch at-installed-deps
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
