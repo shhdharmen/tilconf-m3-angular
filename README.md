@@ -1,4 +1,8 @@
-# M3Angular
+# Using Material 3 (M3) with Angular
+
+This code base was part of presentation at [Til Conf](https://til-conf.netlify.app/) given by [Dharmen Shah](https://twitter.com/shhdharmen).
+
+![dharmen speaker cover](./Speaker%20-%20Dharmen.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
