@@ -2,6 +2,6 @@
 
 @mixin theme($theme) {
   .sidenav {
-    background-color: mat.get-theme-color($theme, surface-container-highest);
+    background-color: mat.get-theme-color($theme, surface-bright);
   }
 }
