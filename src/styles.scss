@@ -1,5 +1,6 @@
 @use "@angular/material" as mat;
 @use "@angular/material-experimental" as matx;
+@use "./app/core/layout/layout.component.theme" as layout-theme;
 
 @include mat.core();
 
@@ -23,10 +24,14 @@ $dark-theme: matx.define-theme(
 
 html {
   @include mat.all-component-themes($light-theme);
+  @include layout-theme.theme($light-theme);
+
   background: mat.get-theme-color($light-theme, surface);
 
   &.dark {
     @include mat.all-component-colors($dark-theme);
+    @include layout-theme.theme($dark-theme);
+
     background: mat.get-theme-color($dark-theme, surface);
   }
 }

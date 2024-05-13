@@ -1,0 +1,7 @@
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  .sidenav {
+    background-color: mat.get-theme-color($theme, surface-container-highest);
+  }
+}
