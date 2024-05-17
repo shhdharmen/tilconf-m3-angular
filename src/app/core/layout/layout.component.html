@@ -35,6 +35,19 @@
       </button>
       }
       <span>m3-angular</span>
+
+      <button
+        class="theme-switch"
+        type="button"
+        aria-label="Toggle theme"
+        mat-icon-button
+        (click)="toggleTheme()"
+        matTooltip="Toggle theme"
+      >
+        <mat-icon>
+          {{ theme() === "light" ? "light_mode" : "dark_mode" }}
+        </mat-icon>
+      </button>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content></ng-content>

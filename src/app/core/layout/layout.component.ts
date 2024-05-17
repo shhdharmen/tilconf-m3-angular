@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { routes } from '../../app.routes';
+import { ThemeManagerService } from '../../theme-manager.service';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-layout',
@@ -24,7 +26,8 @@ import { routes } from '../../app.routes';
     MatIconModule,
     AsyncPipe,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatTooltipModule
   ]
 })
 export class LayoutComponent {
@@ -36,4 +39,11 @@ export class LayoutComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+    private themeManager = inject(ThemeManagerService);
+    theme = this.themeManager.theme;
+
+    toggleTheme() {
+      this.themeManager.toggleTheme();
+    }
 }
