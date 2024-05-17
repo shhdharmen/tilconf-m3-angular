@@ -215,3 +215,75 @@ export class LayoutComponent {
 </mat-nav-list>
 
 ```
+
+## 6. Theme manager
+
+### 6.1 Create Theme manager
+
+#### 6.1.1 Create `theme-manager.service.ts`
+
+```ts
+export type Theme = 'light' | 'dark';
+
+@Injectable({providedIn: 'root'})
+
+export class ThemeManagerService {
+  theme = signal<Theme>('light');
+
+  toggleTheme() {
+    this.theme.update((value) => {
+      return value === 'light' ? 'dark' : 'light';
+    });
+  }
+}
+
+```
+
+#### 6.1.2 Update document’s class
+
+```ts
+private _document = inject(DOCUMENT);
+
+constructor() {
+    effect(() => {
+      if (this.theme() === 'dark') {
+        this._document.documentElement.classList.add('dark');
+      } else {
+        this._document.documentElement.classList.remove('dark');
+      }
+    });
+  }
+
+```
+
+### 6.2 Use Theme manager
+
+#### 6.2.1 Inject theme manager in layout
+
+```ts
+private themeManager = inject(ThemeManagerService);
+
+theme = this.themeManager.theme;
+
+toggleTheme() {
+  this.themeManager.toggleTheme();
+}
+
+```
+
+#### 6.2.2 Add theme switch in layout template
+
+```html
+<button
+        class="theme-switch"
+        type="button"
+        aria-label="Toggle theme"
+        mat-icon-button
+        (click)="toggleTheme()"
+        matTooltip="Toggle theme"
+      >
+        <mat-icon>
+          {{ theme() === "light" ? "light_mode" : "dark_mode" }}
+        </mat-icon>
+      </button>
+```
